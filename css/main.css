@@ -1,0 +1,212 @@
+
+
+/* FONTS */
+@font-face {
+    font-family: "Kaushan Script";
+    src: url("../fonts/Kaushan Script/Kaushan Script.eot");
+    src: url("../fonts/Kaushan Script/Kaushan Script.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Kaushan Script/Kaushan Script.woff2") format("woff2"),
+    url("../fonts/Kaushan Script/Kaushan Script.woff") format("woff"),
+    url("../fonts/Kaushan Script/Kaushan Script.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Georgia Italic";
+    src: url("../fonts/Georgia Italic/Georgia Italic.eot");
+    src: url("../fonts/Georgia Italic/Georgia Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Georgia Italic/Georgia Italic.woff2") format("woff2"),
+    url("../fonts/Georgia Italic/Georgia Italic.woff") format("woff"),
+    url("../fonts/Georgia Italic/Georgia Italic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Yanone Kaffeesatz";
+    src: url("../fonts/Yanone Kaffeesatz/Yanone Kaffeesatz.eot");
+    src: url("../fonts/Yanone Kaffeesatz/Yanone Kaffeesatz.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Yanone Kaffeesatz/Yanone Kaffeesatz.woff2") format("woff2"),
+    url("../fonts/Yanone Kaffeesatz/Yanone Kaffeesatz.woff") format("woff"),
+    url("../fonts/Yanone Kaffeesatz/Yanone Kaffeesatz.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Styles */
+
+/* Header */
+
+.logo {
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 30px;
+}
+.about {
+    display: block;
+    max-width: 480px;
+    margin: 20px auto 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+/* End Header*/
+
+/* Separator */
+
+.separator {
+    margin: 35px 0;
+    background: url("../img/separator.jpg") repeat-x;
+    height: 14px;
+}
+
+.separator--bottom {
+    margin: 35px 0 0;
+}
+
+/* End Separator */
+
+/* Main */
+
+.works__head {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.works__head h3 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.works__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.works__body {
+    margin: 20px 0;
+}
+
+.works__item {
+    padding: 0 0 10px 0;
+}
+
+.info {
+    position: relative;
+    max-height: 245px;
+    overflow: hidden;
+    transition: 0.5s all;
+}
+
+.info img {
+    transition: 0.5s;
+}
+
+.info:hover img {
+    opacity: 0.2;
+}
+
+.overlay {
+    max-width: 350px;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    background: rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+.overlay p {
+    padding-top: 40px;
+    width: 80%;
+    font-family: "Georgia Italic", sans-serif;
+    font-size: 15px;
+}
+
+.control {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.control a {
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+.info:hover .overlay {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.description {
+    max-width: 350px;
+    margin: auto;
+}
+
+.description__title {
+    font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+}
+
+.description__text {
+    font-family: "Georgia Italic", sans-serif;
+}
+
+.description__text span {
+    font-weight: bold;
+}
+
+/* End Main */
+
+/* Footer */
+
+.footer {
+    margin: 10px 0;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+.links {
+    text-align: right;
+}
+
+.links a {
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.links a img {
+    width: 27px;
+    height: 27px;
+}
+
+/* End Footer */
+
+
+/* Media */
+@media (min-width: 570px) and (max-width: 767px){
+    .col-sm-4 {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .overlay p {
+        padding-top: 10px;
+        width: 90%;
+    }
+}
