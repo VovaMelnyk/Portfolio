@@ -129,6 +129,8 @@
 .control {
     display: flex;
     justify-content: space-evenly;
+    width: 165px;
+    margin: auto;
 }
 
 
