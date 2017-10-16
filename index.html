@@ -37,70 +37,7 @@
                 <img src="img/code.svg" alt="code" class="works__icon">
                 <h3>Examples</h3>
             </div>
-            <div class="works__body row">
-                <div class="col-sm-4">
-                    <figure class="works__item">
-                        <div class="info">
-                            <img src="img/Item_1.jpg" alt="scrumi.org" class="center-block img-responsive">
-                            <div class="overlay">
-                                <p class="center-block text-center">Web site for managing IT projects using Scrum (in progress). Build using React and Redux</p>
-                                <div class="control">
-                                    <a href="https://scrumi.org/" target="_blank" class="btn-info">Demo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="description">
-                            <h4 class="description__title">Scrumi.org</h4>
-                            <p class="description__text">
-                                <span>Technologies:</span>
-                                HTML 5 | CSS 3 | React | Redux | Webpack 2 | SCSS | JS
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                    <figure class="works__item">
-                        <div class="info">
-                            <img src="img/Item_2.jpg" alt="Royal Food" class="center-block img-responsive">
-                            <div class="overlay">
-                                <p class="center-block text-center">Responsive restaurant site template. Build using flex box</p>
-                                <div class="control">
-                                    <a href="https://vovamelnyk.github.io/Royal-Food/" target="_blank" class="btn-info">Demo</a>
-                                    <a href="https://github.com/VovaMelnyk/Royal-Food" target="_blank" class="btn-info">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="description">
-                            <h4 class="description__title">Royal Food</h4>
-                            <p class="description__text">
-                                <span>Technologies:</span>
-                                HTML 5 | CSS 3 | Gulp | SCSS | JQuery | Google Maps Embed API
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                    <figure class="works__item">
-                        <div class="info">
-                            <img src="img/Item_3.jpg" alt="This portfolio" class="center-block img-responsive">
-                            <div class="overlay">
-                                <p class="center-block text-center">Responsive portfolio site with using bootstrap 3 grid</p>
-                                <div class="control">
-                                    <a href="https://vovamelnyk.github.io/Portfolio/" target="_blank" class="btn-info">Demo</a>
-                                    <a href="https://github.com/VovaMelnyk/Portfolio" target="_blank" class="btn-info">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="description">
-                            <h4 class="description__title">This portfolio</h4>
-                            <p class="description__text">
-                                <span>Technologies:</span>
-                                HTML 5 | CSS 3 | Bootstrap 3
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            <div class="works__body row"></div>
         </section>
     </main>
     <div class="separator separator--bottom"></div>
@@ -122,5 +59,30 @@
         </div>
     </footer>
 </div>
+<!-- lodash  -->
+<script type="text/template" id="examples-lodash">
+    <% _.forEach(data, function (item) { %>
+    <div class="col-md-4 col-sm-6">
+        <figure class="center-block work__item">
+            <a href="<%- item.demoLink %>" target="_blank"><img src="img/<%- item.img %>" alt="<%-item.alt %>" class="img-responsive"></a>
+            <figcaption>
+                <h4 class="description-title"><%- item.title %></h4>
+                <p class="description-text"><%- item.description %></p>
+                <p class="description-tech">Technologies:
+                    <% _.forEach (item.technologies, function (tech) { %>
+                    <%- tech %>
+                    <% }) %>
+                </p>
+                <a href="<%- item.demoLink %>" class="btn-primary btn" target="_blank"><%- item.demo %></a>
+                <% if(_.indexOf(data, item) > 0) { %>
+                <a href="<%- item.codeLink %>" class="btn-success btn" target="_blank"><%- item.code %></a>
+               <% } %>
+            </figcaption>
+        </figure>
+    </div>
+    <% }) %>
+</script>
+<script src="js/lodash.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -7,5 +7,6 @@ This is a responsive portfolio template
 * HTML 5
 * Bootstrap 3 grid
 * CSS 3
+* Lodash template
 
 Demo [github pages](https://vovamelnyk.github.io/Portfolio/)

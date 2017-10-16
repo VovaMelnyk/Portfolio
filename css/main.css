@@ -87,86 +87,20 @@
     height: 30px;
 }
 
-.works__body {
-    margin: 20px 0;
-}
-
-.works__item {
-    padding: 0 0 10px 0;
-}
-
-.info {
-    position: relative;
-    max-height: 245px;
-    overflow: hidden;
-    transition: 0.5s all;
-}
-
-.info img {
-    transition: 0.5s;
-}
-
-.info:hover img {
-    opacity: 0.2;
-}
-
-.overlay {
-    max-width: 350px;
-    height: 100%;
-    position: absolute;
-    bottom: -100%;
-    background: rgba(0,0,0,0.1);
-    transition: 0.5s;
-}
-
-.overlay p {
-    padding-top: 40px;
-    width: 80%;
-    font-family: "Georgia Italic", sans-serif;
-    font-size: 15px;
-}
-
-.control {
-    display: flex;
-    justify-content: space-evenly;
-    width: 165px;
-    margin: auto;
-}
-
-
-.control a {
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-
-.info:hover .overlay {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.description {
-    max-width: 350px;
-    margin: auto;
-}
-
-.description__title {
+.description-title {
     font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
-
-.description__text {
+.description-text {
+    font-family: Arial, sans-serif;
+}
+.description-tech {
     font-family: "Georgia Italic", sans-serif;
 }
 
-.description__text span {
-    font-weight: bold;
+.work__item {
+    max-width: 350px;
+    margin-top: 20px
 }
 
 /* End Main */
@@ -199,16 +133,8 @@
 
 
 /* Media */
-@media (min-width: 570px) and (max-width: 767px){
-    .col-sm-4 {
-        width: 50%;
-        float: left;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .overlay p {
-        padding-top: 10px;
-        width: 90%;
+@media (min-width: 992px) and (max-width: 1200px){
+    .col-md-4:nth-child(3n+1){
+        clear: left;
     }
 }
